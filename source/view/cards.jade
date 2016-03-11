@@ -1,0 +1,9 @@
+div.page-cards(layout="column" layout-align="start center")
+  div.controls
+    md-button.md-icon-button(ng-click="init()")
+      md-icon settings_backup_restore
+  div.box(ng-hide="completed")
+    md-grid-list( md-cols="4" md-cols-md="4"  md-cols-gt-md="4"  md-row-height="1:1" md-row-height-gt-sm="1:1" md-gutter="15px" role="cards box" md-cols-sm="4" md-cols-xs="4"  ng-cloak)
+      md-grid-tile.md-whiteframe-z1.element-card(md-rowspan="1" md-colspan="1"  md-colspan-xs="1" ng-style="{'background-color': item.color}" ng-repeat="item in cards track by $index" ng-class="{'close': item_state(item)}" ng-click="toggle(item)")
+  div.completed.md-whiteframe-z1(layout="column" layout-align="center center" ng-show="completed")
+    div.md-title {{'done' | translate}}

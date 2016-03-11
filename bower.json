@@ -1,0 +1,52 @@
+{
+  "name": "template_themeforest",
+  "homepage": "https://github.com/AlexanderKozhevin/mytemplate",
+  "authors": [
+    "alexanderkozhevin <turboasm21@gmail.com>"
+  ],
+  "description": "Angular material template for themeforest by Kozhevin Alexander",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "material",
+    "angular",
+    "gulp",
+    "themeforest",
+    "template"
+  ],
+  "license": "private",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-aria": "~1.4.8",
+    "angular-dynamic-locale": "~0.1.29",
+    "angular-i18n": "~1.4.8",
+    "angular-material": "~1.0.0",
+    "angular-messages": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "angular-simple-logger": "~0.1.5",
+    "angular-translate-storage-cookie": "~2.8.1",
+    "angular-translate": "~2.8.1",
+    "angular-ui-router": "~0.2.15",
+    "restangular": "~1.5.1",
+    "angular-translate-loader-static-files": "~2.8.1",
+    "ng-file-upload": "~10.1.9",
+    "angular-material-data-table": "~0.9.5",
+    "bourbon": "~4.2.6",
+    "angular-clipboard": "~1.2.1",
+    "angular-fileupload": "angular-filereader#~1.0.4",
+    "material-color": "~2.2.0",
+    "angular-local-storage": "~0.2.5",
+    "angular-mixpanel": "~1.1.2",
+    "underscore": "~1.8.3"
+  }
+}

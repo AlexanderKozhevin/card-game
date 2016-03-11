@@ -1,0 +1,19 @@
+.page-cards{
+  width: 100%;
+  margin-top: $primary-margin;
+
+  .controls{
+    margin-bottom: $primary-margin;
+  }
+
+  .box{
+    max-width: 100%;
+    width: 450px;
+    height: 450px;
+  }
+  .completed{
+    width: 450px;
+    height: 200px;
+    max-width: 100%;
+  }
+}

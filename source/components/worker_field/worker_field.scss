@@ -1,0 +1,93 @@
+.component__worker-field{
+
+
+
+  .label{
+    width: $user_avatar-size;
+    min-width: $user_avatar-size;
+
+    .label-index{
+      @extend .element-avatar;
+      @include transition(all 0.2s linear);
+      border: 1px solid rgba($clr-grey, 0.5);
+      background-color: $clr-grey-50;
+      color: $clr-grey;
+
+      &__digit{display: block;}
+      &__icon{display: none;}
+    }
+
+    .label-line{
+      width: 1px;
+      background-color: rgba(grey, 0.5);
+    }
+  }
+
+  .label--done{
+    .label-index,
+    .label-line{background-color: $clr-teal;}
+    .label-index__digit{display: none;}
+    .label-index__icon{display: block;color: white;}
+  }
+
+
+
+  .value{
+    &__label{
+      min-height: $avatar-size;
+      height: auto;
+      &.md-subheader{display: flex!important;}
+    }
+    &__data{
+      padding-bottom: 20px;
+    }
+  }
+
+
+
+  editor-gallery{
+    .add-button{margin-left: 0px!important;}
+
+    .box{margin-top: $primary-padding;}
+
+    .box-item{
+      @include transition(all 0.2s linear);
+    }
+
+    .cover{
+      @include linear-gradient(-45deg, rgba(black, 0.3), transparent, rgba(black, 0.3));
+      @include transition(all 0.1s linear);
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      color: white;
+
+      &:hover{opacity: 1;}
+
+      .cover__controls md-icon{color: white;}
+    }
+  }
+
+  editor-file .file__attach{margin-left: 0px!important;}
+
+  editor-date md-datepicker{
+    // SHAME !
+    margin-left: -17px;
+  }
+
+  md-select{
+    max-width: 90%;
+    overflow: hidden;
+    white-space:nowrap!important;
+    text-overflow: ellipsis!important;
+    display: block;
+    .md-select-value *:first-child{
+      width: calc(100% - 24px);
+    }
+  }
+
+
+
+
+
+}

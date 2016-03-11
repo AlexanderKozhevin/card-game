@@ -1,0 +1,6 @@
+.element-card{
+  @include transition(all 0.2s linear);
+  &.close{
+    background-color: $clr-grey-400!important;
+  }
+}

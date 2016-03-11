@@ -1,0 +1,149 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @group Animation
+////
+
+
+
+//
+// Simple listing anination
+//
+.animate-listing.ng-enter-stagger, .animate-listing.ng-leave-stagger {
+  @include transition-delay(0.2s);
+  @include transition-duration(0s);
+}
+.animate-listing.ng-enter{
+  @include transform(translate(0px,10px) rotateX(30deg));
+  opacity: 0;
+  @include transition(all 0.2s linear);
+}
+
+.animate-listing.ng-enter-active{
+  @include transform(translate(0px,0px) rotateX(0deg));
+  opacity: 1;
+  @include transition(all 0.2s linear);
+
+}
+.animate-listing.ng-leave{
+  @include transform(translate(0px,0px) rotateX(0deg));
+  opacity: 1;
+  @include transition(all 0.2s linear);
+
+}
+.animate-listing.ng-leave-active{
+  @include transform(translate(0px,10px) rotateX(-30deg));
+  opacity: 0;
+  @include transition(all 0.2s linear);
+}
+
+
+/// Listing animation for element which require overload - "md-table" for example
+@mixin animate-listing(){
+  &.ng-enter-stagger, &.ng-leave-stagger {
+    @include transition-delay(0.2s);
+    @include transition-duration(0s);
+  }
+  &.ng-enter{
+    @include transform(translate(0px,10px) rotateX(30deg));
+    opacity: 0;
+    @include transition(all 0.2s linear);
+  }
+
+  &.ng-enter-active{
+    @include transform(translate(0px,0px) rotateX(0deg));
+    opacity: 1;
+    @include transition(all 0.2s linear);
+
+  }
+  &.ng-leave{
+    @include transform(translate(0px,0px) rotateX(0deg));
+    opacity: 1;
+    @include transition(all 0.2s linear);
+
+  }
+  &.ng-leave-active{
+    @include transform(translate(0px,10px) rotateX(-30deg));
+    opacity: 0;
+    @include transition(all 0.2s linear);
+  }
+
+}
+
+
+//
+// Page-landing: left block appearance
+//
+@include keyframes(landing-fade) {
+  from {
+    @include transform(translateX(-100px));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateX(0px));
+    opacity: 1;
+  }
+}
+
+@include keyframes(donner) {
+  from {
+
+    @include transform(scale3d(0.8, 0.8, 0.8));
+
+    opacity: 0;
+  }
+  to {
+    @include transform(scale3d(1, 1, 1));
+
+    opacity: 1;
+  }
+}
+
+
+@include keyframes(avatar-uploading) {
+  0% {
+
+    border: 1px solid rgba($clr-grey, 0.5);
+
+  }
+  50% {
+
+    border: 1px solid rgba($clr-teal, 0.5);
+
+  }
+  1000% {
+
+    border: 1px solid rgba($clr-grey, 0.5);
+
+  }
+}
+
+//
+// Animate top-layer view - "login", "landing", "admin panel"
+//
+[ui-view="root_layout"].ng-enter, [ui-view="root_layout"].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  @include transition(all 0.3s ease-in-out);
+}
+
+[ui-view="root_layout"].ng-enter {
+  opacity: 0;
+  @include transform(scale3d(0.8, 0.8, 0.8));
+}
+
+[ui-view="root_layout"].ng-enter-active {
+  opacity: 1;
+  @include transform(scale3d(1, 1, 1));
+}
+
+[ui-view="root_layout"].ng-leave {
+  opacity: 1;
+  @include transform(translate3d(0, 0, 0));
+}
+
+[ui-view="root_layout"].ng-leave-active {
+  opacity: 0;
+  @include transform(translate3d(100px, 0, 0));
+}
