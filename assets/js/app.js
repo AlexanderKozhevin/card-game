@@ -11,7 +11,7 @@
     var locale;
     $translateProvider.useCookieStorage();
     $translateProvider.useStaticFilesLoader({
-      prefix: '/locales/',
+      prefix: '/card-game/locales/',
       suffix: '.json'
     });
     locale = document.querySelector('body').getAttribute('locale');
@@ -19,7 +19,7 @@
       locale = "en-us";
     }
     $translateProvider.preferredLanguage('en');
-    tmhDynamicLocaleProvider.localeLocationPattern('/locales/angular-locale_{{locale}}.js');
+    tmhDynamicLocaleProvider.localeLocationPattern('/card-game/locales/angular-locale_{{locale}}.js');
     return tmhDynamicLocaleProvider.defaultLocale('en-us');
   });
 
